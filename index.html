@@ -6,6 +6,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital, wght@0, 100; 0,30 0;0,400;0,500; 0,600; 0,700;1, 100;1,200;1,300; 1,400;1,500; 1,600;1,700&family-Montserrat: wght@700; 800; 900&display-swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="D:\Website\responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <style>
        * {
     padding: 0;
@@ -40,6 +42,7 @@ nav ul li{
     list-style-type: none;
     display: inline-block;
     padding: 10px 20px;
+
 }
 nav ul li a{
     color: white;
@@ -309,37 +312,79 @@ footer p:nth-child(2){
     color: red;
     bottom: 35px;
     font-size: 14px;
-
-        }
-@media screen and (max-width: 600)
-  {
-      .about-text h2{
-    color: white;
-    font-size: 75px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
 }
-.about-text h5{
-    color: white;
-    letter-spacing: 2px;
-    font: 22px;
-    margin-bottom: 25px;
-    text-transform: capitalize;
+.mobile-menu{
+    float: right;
+    display: none;
+    padding: 10px;
+    padding-top: 7%;
 }
-.about-text p{
-    color: #fcfc;
-    letter-spacing: 1px;
-    line-height: 28px;
-    font-size: 18px;
-    margin-bottom: 45px;
+#check{
+    display: none;
+    background-color: #000;
 }
+.sidebar{
+        position: fixed;
+        top: 0;
+        bottom: 0%;
+        left: -300px;
+        width: 300px;
+        background-color: black;
+        transition: .3s;
 }
-
+.sidebar ul li a{
+    color: #fff;
+}
+.sidebar ul li{
+    padding: 24px;
+    transition: .3s;
+    
+}
+.sidebar ul li:hover{
+    background-color: red
+}
+#check:checked ~ .sidebar{
+    left: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+@media (max-width: 768px) {
+    .mobile-menu{
+        display: block;
+    }
+    .mobile-menu:hover{
+        cursor: pointer;
+    }
+     nav ul li{
+        display: none;
+     }
+     .btn{
+        display: none;
+     }
+    .main img{
+        display: none;
+    }
+     
+     }
 
     </style>
   </head>
 <body>
-  <!----hero Section start---->
+ <!----menu mobile-------->
+            <label for="check" class="mobile-menu"><i class="fa-solid fa-bars fa-2x"></i></label>
+<!---sidebar-->
+<input type="checkbox" id="check">
+<div class="sidebar">
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="https://trakteer.id/kamehameha">Trakteer</a></li>
+        <li><a href="https://discord.gg/tYuJdKVQjU">Discord</a></li>
+        <li><a href="https://www.instagram.com/m.fariq_/">Contact Us</a></li>
+        <li><a href="https://www.youtube.com/channel/UCYtV5BpqPBiXOkBgKV41h-w">Subscribe</a></li>   
+    </ul>     
+</div>
+<!----hero Section start---->
     <div class="hero">
       <nav>
          <h2 class="logo">Fariq<span>.Sw</span></h2>
@@ -349,8 +394,9 @@ footer p:nth-child(2){
             <li><a href="https://trakteer.id/kamehameha">Trakteer</a></li>
             <li><a href="https://discord.gg/tYuJdKVQjU">Discord</a></li>
             <li><a href="https://www.instagram.com/m.fariq_/">Contact Us</a></li>
-         </ul>
+         </a>
          <a href="https://www.youtube.com/channel/UCYtV5BpqPBiXOkBgKV41h-w" class="btn">Subscribe</a>
+        </ul>
       </nav>
            <div class="content">
           <h4>Hello, my name is</h4>
